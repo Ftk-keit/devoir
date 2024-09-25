@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 
 import projetps.entities.Medecin;
+import projetps.entities.Rv;
 import projetps.repository.MedecinRepository;
 import projetps.repository.db.RepositoryDbImp;
 
@@ -91,4 +92,5 @@ public class MedecinRepositoryDbImpl extends RepositoryDbImp<Medecin>  implement
         }
         return medecins;
     }
+   
 }

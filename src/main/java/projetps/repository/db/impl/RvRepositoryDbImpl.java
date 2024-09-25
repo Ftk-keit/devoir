@@ -1,7 +1,6 @@
 package projetps.repository.db.impl;
 
 import java.sql.ResultSet;
-import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
 import projetps.entities.Rv;
@@ -64,8 +63,14 @@ public class RvRepositoryDbImpl extends RepositoryDbImp<Rv>  implements RvReposi
     }
 
     @Override
-    public List<Rv> filtreByDate(Date date) {
-        return null;
+    public List<Rv> filtreByDate(String date) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'filtreByDate'");
     }
+
+    
+
+   
+
     
 }

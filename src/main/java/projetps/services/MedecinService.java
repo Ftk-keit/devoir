@@ -3,24 +3,24 @@ package projetps.services;
 import java.util.List;
 
 import projetps.entities.Medecin;
-import projetps.repository.db.impl.MedecinRepositoryDbImpl;
+import projetps.repository.MedecinRepository;
 
 public class MedecinService {
-    private MedecinRepositoryDbImpl medecinRepositoryDbImpl;
+    private MedecinRepository medecinRepository;
 
-    public MedecinService(MedecinRepositoryDbImpl medecinRepositoryDbImpl) {
-        this.medecinRepositoryDbImpl = medecinRepositoryDbImpl;
+    public MedecinService(MedecinRepository medecinRepository) {
+        this.medecinRepository = medecinRepository;
     }
 
     public void enregistre(Medecin medecin) {
-        medecinRepositoryDbImpl.insert(medecin);
+        medecinRepository.insert(medecin);
     }
 
     public Medecin selectById(int id) {
-         return medecinRepositoryDbImpl.selectByID(id);
+         return medecinRepository.selectByID(id);
     }
 
     public List<Medecin> show() {
-        return medecinRepositoryDbImpl.selectAll();
+        return medecinRepository.selectAll();
     }
 }

@@ -16,6 +16,7 @@ public class Main {
 
         MedecinService medecinService = new MedecinService(medecinRepositoryDbImpl);
         MedecinVue medecinVue = new MedecinVue();
+        
         int choice;
         do {
             choice = showMenu();
@@ -24,9 +25,15 @@ public class Main {
             scanner.nextLine();
             switch (choice) {
                 case 1:
-                medecinService.enregistre(medecinVue.saisie());
+                      medecinService.enregistre(medecinVue.saisie());
                     break;
 
+                    case 2:
+                    medecinVue.liste(medecinService.show());
+                    break;
+                    case 3:
+                    medecinVue.liste(medecinService.show());
+                    break;
                     default:
                     break;
             }

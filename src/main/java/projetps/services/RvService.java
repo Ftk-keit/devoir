@@ -1,21 +1,23 @@
 package projetps.services;
+
 import java.util.List;
 
 import projetps.entities.Rv;
+import projetps.repository.RvRepository;
 import projetps.repository.db.impl.RvRepositoryDbImpl;
 
 public class RvService {
-   private RvRepositoryDbImpl rvRepositoryDbImpl;
+    private RvRepository rvRepository;
 
-      public RvService(RvRepositoryDbImpl rvRepositoryDbImpl) {
-    this.rvRepositoryDbImpl = rvRepositoryDbImpl;
-}
+    public RvService(RvRepositoryDbImpl rvRepository) {
+        this.rvRepository = rvRepository;
+    }
 
-    public void enregistre(Rv medecin){
-        rvRepositoryDbImpl.insert(medecin);
+    public void enregistre(Rv medecin) {
+        rvRepository.insert(medecin);
     }
 
     public List<Rv> show() {
-        return rvRepositoryDbImpl.selectAll();
+        return rvRepository.selectAll();
     }
 }
